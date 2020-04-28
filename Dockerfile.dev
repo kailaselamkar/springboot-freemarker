@@ -1,0 +1,20 @@
+FROM gradle:6.3.0-jdk8
+
+WORKDIR /home/SpringBootFreemarkerDemo2
+
+#COPY ./build.gradle ./
+
+#COPY ./src/main/java ./src/main/java
+
+#COPY ./src/test  ./src/test
+
+#COPY ./src/main/resources ./src/main/resources
+
+COPY ./ ./
+
+#RUN gradle build
+
+
+#CMD [ "java" ,"-jar", "./build/libs/SpringBootFreemarkerDemo-0.0.1-SNAPSHOT.jar" ]
+
+CMD [ "gradle", "bootrun" ]

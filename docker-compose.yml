@@ -1,0 +1,14 @@
+version: '2'
+services: 
+    springbootfreemarkerapp:
+        build: 
+            context: .
+            dockerfile: Dockerfile.dev
+        ports: 
+            -   "8080:8080"
+    tests:
+        build: 
+            context: .
+            dockerfile: Dockerfile.dev
+        command: ["gradle","test","-i"]
+                
